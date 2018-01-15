@@ -1,0 +1,7 @@
+div {color: red;font-size: 20px;}
+@media (not width:600px) {
+	p {
+		color: red;
+		font-size: 20px;
+	}
+}

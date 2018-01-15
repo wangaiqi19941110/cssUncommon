@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="tools/jquery.min.js" ></script>
+	</head>
+	<body>
+		<div>
+			<input type="checkbox" onclick="$.check.chkAll()"/>全选
+		</div>
+		<input type="checkbox" onclick="$.check.chkOne()"/>
+		<input type="checkbox" onclick="$.check.chkOne()"/>
+		<input type="checkbox" onclick="$.check.chkOne()"/>
+		<script>
+		;(function(jQuery){
+		    var chkOperatorExt = {
+		        chkAll: function(){
+		            // 当前页全选状态更新
+		            $(":checkbox").prop("checked", $(":checkbox:first").is(":checked"));
+		        },
+		        chkOne: function(){
+		            // 单选状态更新
+		            var childChkLen = $(":checkbox:not(:first)").size();
+		            if (0 < childChkLen) {
+		                var childChkedSize = $(":checkbox:not(:first):checked").size();
+		                $(":checkbox:first").prop("checked", (childChkLen === childChkedSize));
+		            }
+		        }
+		    };
+		    $.check = chkOperatorExt;
+		})(jQuery);
+		</script>
+	</body>
+</html>

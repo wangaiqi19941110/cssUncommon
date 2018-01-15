@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			.div {
+				width: 150px;
+			}
+			li {
+				list-style: none;
+			}
+			span {
+				background: blue;
+				display: inline-block;
+				height: 30px;
+				line-height: 30px;
+				width: 150px;
+				color: #fff;
+				text-align: center;
+			}
+			.hoverUl {
+				background: #eee;
+				color: #fff;
+				display: none;
+			}
+			.hoverUl li:hover {
+				background: #fff;
+				color: blue;
+			}
+			.div:hover .hoverUl {
+				display: block;				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div">
+			<span>classHover</span>
+			<ul class="hoverUl">
+				<li>1111</li>
+				<li>1111</li>
+				<li>1111</li>
+				<li>1111</li>
+			</ul>
+		</div>
+	</body>
+</html>

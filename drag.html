@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/jquery.gridly.css" />
+		<script type="text/javascript" src="tools/jquery.min.js" ></script>
+		<script type="text/javascript" src="tools/jquery.gridly.js" ></script>
+		<style type="text/css">
+		  .gridly {
+		    position: relative;
+		    width: 960px;
+		  }
+		  .brick.small {
+		    width: 140px;
+		    height: 140px;
+		    background: red;
+		  }
+		  .brick.large {
+		    width: 300px;
+		    height: 300px;
+		    background: yellow;
+		  }
+		</style>
+	</head>
+	<body>
+		<div class="gridly">
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		</div>
+		<div class="gridly">
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		</div>
+		<div class="gridly">
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		  <div class="brick small"></div>
+		</div>
+		<script>
+		  $('.gridly').gridly({
+		    base: 60, // px 
+		    gutter: 20, // px
+		    columns: 12
+		  });
+		</script>
+	</body>
+</html>

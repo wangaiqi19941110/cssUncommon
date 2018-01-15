@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="tools/jquery.min.js" ></script>
+		<style>
+		html,body {
+			width: 100%;
+			height: 100%;
+		}
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			table {
+				background: #000;
+			}
+			table td{
+				padding: 10px 20px;
+				background: #fff;
+			}
+			input {
+				border: 0;
+				outline: none;
+			}
+			select {
+				outline: none;
+			}
+			.blur {
+				appearance:none;
+				-moz-appearance:none; 
+				-webkit-appearance:none;
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<table cellspacing="1">
+			<tr>
+				<td>
+					<input type="text" class="inputV" value="0000000"/>
+				</td>
+				<td>
+					<select class="selectInfo blur">
+						<option>2222222</option>
+						<option>333333333</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<script>
+			$(function() {
+				var inputB = $(".inputV"),
+					selectInfo = $(".selectInfo");
+				inputB.focus(function() {
+					$(this).css({
+						"border":"1px solid #000"
+					})
+					$(this).closest("td").css({
+						"padding":"9px 19px"
+					})
+				})
+				inputB.blur(function() {
+					$(this).css({
+						"border":"0"
+					})
+					$(this).closest("td").css({
+						"padding":"10px 20px"
+					})
+				})
+				selectInfo.focus(function() {
+					$(this).removeClass("blur");
+				})
+				selectInfo.blur(function() {
+					$(this).addClass("blur");
+				})
+			})
+		</script>
+	</body>
+</html>
